@@ -1,0 +1,84 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(158, 132, 160);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.text {
+  margin: 50px;
+  text-align: center;
+  font-size: 25px;
+  padding: 75px;
+  width: 205px;
+  height: 100px;
+  color: rgb(169, 144, 203);
+  background-color: rgb(169, 144, 203);
+  border-style: solid;
+  border-width: 10px;
+  border-color: rgb(123, 89, 123);
+  border-radius: 10%;
+
+  transition: transform 1s ease 0s;
+  opacity: 0;
+  animation: ani 2.5s forwards;
+}
+
+.line {
+  margin: 0 auto;
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgb(123, 89, 123);
+  box-shadow: 2px 2px 2px #382131;
+
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.text:hover {
+  color: wheat;
+  background-color: rgb(169, 144, 203);
+  box-shadow: 5px 4px 5px #382131;
+  transform: translateY(-10px);
+  opacity: 75%;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateY(300px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
