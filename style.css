@@ -65,7 +65,7 @@ body {
   color: wheat;
   z-index: 0;
   /* animation */
-  animation: appearingScroe 1s ease 2s 1 normal forwards;
+  animation: appearingScroe 1s ease 1s 1 normal forwards;
   opacity: 0;
 }
 

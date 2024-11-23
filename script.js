@@ -12,7 +12,7 @@ function clickButton(button, flag) {
     button.style.color = "rgb(218, 172, 89)";
   } else {
     button.style.backgroundColor = "rgb(169, 144, 203)";
-    button.style.color = " wheat";
+    button.style.color = "wheat";
   }
   num++;
   score.textContent = num;
