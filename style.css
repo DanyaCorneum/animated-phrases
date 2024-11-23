@@ -13,13 +13,13 @@ body {
   justify-content: center;
   margin-top: 100px;
 }
-.text {
+.text button {
   margin: 50px;
   text-align: center;
-  font-size: 25px;
-  padding: 75px;
+  font-size: 30px;
+  padding: 10px;
   width: 205px;
-  height: 100px;
+  height: 200px;
   color: rgb(169, 144, 203);
   background-color: rgb(169, 144, 203);
   border-style: solid;
@@ -37,7 +37,7 @@ body {
   width: 200px;
   height: 10px;
   border-radius: 5px;
-  background-color: rgb(123, 89, 123);
+  background-color: rgb(158, 115, 173);
   box-shadow: 2px 2px 2px #382131;
 
   animation-name: slideInLeft;
@@ -50,7 +50,7 @@ body {
   opacity: 0;
 }
 
-.text:hover {
+.text button:hover {
   color: wheat;
   background-color: rgb(169, 144, 203);
   box-shadow: 5px 4px 5px #382131;
