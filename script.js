@@ -1,29 +1,32 @@
 const buttonPressMe = document.getElementById("Press me");
 const buttonMeToo = document.getElementById("Me too");
-let buttonPressMeScore = 0;
-let buttonMeTooScore = 0;
+const score = document.getElementsByClassName("score")[0];
 
-function changeColorPressMe() {
-  if (buttonPressMeScore % 2 == 0) {
-    buttonPressMe.style.backgroundColor = "rgb(88, 47, 126)";
-    buttonPressMe.style.color = "rgb(218, 172, 89)";
+let num = 0;
+let PressMeFlag = true;
+let MeTooFlag = true;
+
+function clickButton(button, flag) {
+  if (flag) {
+    button.style.backgroundColor = "rgb(88, 47, 126)";
+    button.style.color = "rgb(218, 172, 89)";
   } else {
-    buttonPressMe.style.backgroundColor = "rgb(169, 144, 203)";
-    buttonPressMe.style.color = " wheat";
+    button.style.backgroundColor = "rgb(169, 144, 203)";
+    button.style.color = "wheat";
   }
-  buttonPressMeScore++;
+  num++;
+  score.textContent = num;
 }
 
-function changeColorMeToo() {
-  if (buttonMeTooScore % 2 == 0) {
-    buttonMeToo.style.backgroundColor = "rgb(88, 47, 126)";
-    buttonMeToo.style.color = "rgb(218, 172, 89)";
-  } else {
-    buttonMeToo.style.backgroundColor = "rgb(169, 144, 203)";
-    buttonMeToo.style.color = " wheat";
-  }
-  buttonMeTooScore++;
+function clickPressMe() {
+  clickButton(buttonPressMe, PressMeFlag);
+  PressMeFlag = !PressMeFlag;
 }
 
-buttonPressMe.addEventListener("click", changeColorPressMe);
-buttonMeToo.addEventListener("click", changeColorMeToo);
+function clickMeToo() {
+  clickButton(buttonMeToo, MeTooFlag);
+  MeTooFlag = !MeTooFlag;
+}
+
+buttonPressMe.addEventListener("click", clickPressMe);
+buttonMeToo.addEventListener("click", clickMeToo);
